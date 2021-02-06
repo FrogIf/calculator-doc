@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% include head.html %}
+<body>
+  {% include header.html %}
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      <ol class="post-card-box clearfix">
+        {% for at in site.article_theme %}
+        <li>
+          {{at}}
+        </li>
+        {% endfor %}
+      </ol>
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
