@@ -21,8 +21,8 @@
 title: Calculator
 email: skyfrog@163.com
 description: A simple calculator.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "/calculator-doc" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/calculator-doc" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: frognull
 github_username:  FrogIf
 
