@@ -1,0 +1,35 @@
+{% include content-head.html %}
+<div class="menu-btn">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+</div>
+<div class="post-main">
+    <div class="menu-container menu-container-bar">
+        {% include toc.html html=content %}
+    </div>
+    <div class="article-container">
+        <div class="article-content">
+            {{page.content}}
+        </div>
+    </div>
+</div>
+<script>
+$(function () {
+    $('.menu-btn').click(function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        if ($('.menu-container').hasClass('open')) {
+            $('.menu-container').removeClass('open');
+            $('.article-container').removeClass('compress');
+        }else{
+            $('.menu-container').addClass('open');
+            $('.article-container').addClass('compress');
+        }
+    })
+    $('.article-container').click(function (e) {
+        if ($('.menu-container').hasClass('open')){
+            $('.menu-container').removeClass('open');
+            $('.article-container').removeClass('compress');
+        }
+    })
+})
+</script>

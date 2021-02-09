@@ -7,11 +7,13 @@ layout: default
   <main class="page-content" aria-label="Content">
     <div class="wrapper">
       <ol class="post-card-box clearfix">
-        {% for at in site.article_theme %}
-        <li>
-          {{at}}
-        </li>
+        {% for post in site.posts %} 
+        <li><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
         {% endfor %}
+        <!-- <li><a href="{{site.baseurl}}/algorithm/">算法(Algorithm)</a></li>
+        <li><a>抽象代数(Abstract Algebra)</a></li>
+        <li><a>计算机代数(Computer Algebra)</a></li>
+        <li><a>数值计算(Numerical Computation)</a></li> -->
       </ol>
     </div>
   </main>
