@@ -1,21 +1,12 @@
 ---
-layout: default
+layout: home
 ---
-{% include head.html %}
-<body>
-  {% include header.html %}
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      <ol class="post-card-box clearfix">
-        {% for post in site.posts %} 
-        <li><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
-        {% endfor %}
-        <!-- <li><a href="{{site.baseurl}}/algorithm/">算法(Algorithm)</a></li>
-        <li><a>抽象代数(Abstract Algebra)</a></li>
-        <li><a>计算机代数(Computer Algebra)</a></li>
-        <li><a>数值计算(Numerical Computation)</a></li> -->
-      </ol>
-    </div>
-  </main>
-  {% include footer.html %}
-</body>
+<main class="page-content" aria-label="Content">
+  <div class="wrapper">
+    <ol class="post-card-box clearfix">
+      {% for post in site.posts %} 
+      <li><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></li>
+      {% endfor %}
+    </ol>
+  </div>
+</main>
