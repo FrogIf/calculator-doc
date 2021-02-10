@@ -277,23 +277,23 @@ $$
 \hat{r} = (u'_{j + n} \cdot b + u'_{j + n - 1}) \, mod\, v_{n - 1}
 $$
 
-检查估商的正确性, 测试是否$\hat{q_j} = b$或$\hat{q_j} \cdot v'_{n-2} > b\hat{r} + u'_{j+n-2}$
+检查估商的正确性, 测试是否`$\hat{q_j} = b$`或`$\hat{q_j} \cdot v'_{n-2} > b\hat{r} + u'_{j+n-2}$`
 
 如果是, 则使得$\hat{q_j} = \hat{q_j} - 1$, $\hat{r} = \hat{r} + v_{n - 1}$, 此时, 如果$\hat{r} < b$, 重复此测试.
 
-> 对于上面估商正确性判定的解释: 首先, 由前面可知$\hat{q_j}<b$, 所以$\hat{q_j} = b$表明估商结果是不正确的; 其次, 对于$\hat{q_j} \cdot v'_{n-2} > b\hat{r} + u'_{j+n-2}$时, $\hat{q_j} > q$的证明见附录.
+> 对于上面估商正确性判定的解释: 首先, 由前面可知`$\hat{q_j}<b$, 所以$\hat{q_j} = b$`表明估商结果是不正确的; 其次, 对于`$\hat{q_j} \cdot v'_{n-2} > b\hat{r} + u'_{j+n-2}$`时, `$\hat{q_j} > q$`的证明见附录.
 
 **4. 乘和减**
 
-以$(u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j) - \hat{q_j} (v'_{n-1} \cdot b^{n-1} + v'_{n-2} \cdot b^{n-2} + \cdots + v'_0)$代替原来的$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$
+以`$(u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j) - \hat{q_j} (v'_{n-1} \cdot b^{n-1} + v'_{n-2} \cdot b^{n-2} + \cdots + v'_0)$`代替原来的`$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$`
 
 **5. 测试余数**
 
-如果$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$的值为负数, 则执行步骤6, 否则执行步骤7
+如果`$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$`的值为负数, 则执行步骤6, 否则执行步骤7
 
 **6. 往回加**
 
-将$\hat{q_j}$减1, 并把$v'_{n-1} \cdot b^{n-1} + v'_{n-2} \cdot b^{n-2} + \cdots + v'_0$加到$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$上
+将`$\hat{q_j}$减1, 并把$v'_{n-1} \cdot b^{n-1} + v'_{n-2} \cdot b^{n-2} + \cdots + v'_0$`加到`$u'_{j+n} \cdot b^{n} + u'_{j+n-1} \cdot b^{n - 1} + \dots + u'_j$`上
 
 **7. 对j进行循环**
 
@@ -489,7 +489,7 @@ $$
 u'_{m+n} - v'_{n - 1} < 0或u'_{m+n} < v'_{n - 1}
 $$
 
-又根据$u'_{m+n} = (u_{m+n-1}d) / b$以及$v'_{n-1} \geq v_{n-1}d$, 所以即证:
+又根据 `$u'_{m+n}=(u_{m+n-1}d)/b $`以及`$v'_{n-1} \geq v_{n-1}d$`, 所以即证:
 
 $$
 \frac{u_{m+n-1}d}{b} < v_{n-1}d\\

@@ -7,15 +7,26 @@
 	<link rel="stylesheet" href="{{site.baseurl}}/assets/main.css">
 	<script src="{{site.baseurl}}/assets/js/jquery-3.2.1.min.js"></script>
 	<link rel="stylesheet" href="{{site.baseurl}}/assets/fonts/font-awesome/css/font-awesome.min.css"/>
-	<script type="text/javascript" async
-  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async>
-</script>
-	<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			tex2jax: {
-			skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-			inlineMath: [['$','$']]
+  	<script src="{{site.baseurl}}/assets/js/mathjax/tex-svg.js" id="MathJax-script" async></script>
+	<script>
+		MathJax = {
+			tex: {
+			  inlineMath: [['$', '$']]
+			},
+			svg: {
+			  fontCache: 'global'
 			}
+		};
+		// 内联数学表达式, 下划线与markdown语法冲突
+		window.addEventListener('DOMContentLoaded', () => {
+			document.querySelectorAll('code').forEach(code => {
+				const text = code.innerHTML;
+				if (/^\$(.*)\$$/.exec(text)) {
+					console.log("match");
+					code.parentElement.classList.add('has-jax');
+					code.outerHTML = "<span class=yuuki_mathjax_inline>" + text + "</span>";
+				}
+			});
 		});
 	</script>
 </head>
